@@ -1,0 +1,107 @@
+# Taps
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+
+# Brew extensions and helper
+# Install applications from Mac App Store
+brew "mas"
+
+# Python
+# we need to install different versions
+# brew install python
+# brew install python@3.7
+# brew pin python@3.7
+# brew link --overwrite --force python@3.7
+# add "/usr/local/opt/python@3.7/libexec/bin" to path
+brew python
+brew python@3.7, link: true
+
+# zon dev environment
+brew graphviz 
+brew nginx 
+brew libevent 
+brew libjpg 
+brew libmagic
+brew libffi
+brew libmemcached
+brew webp
+brew node
+brew pkg-config
+brew wget
+
+# Browsers
+# Firefox, maybe chose one
+cask "firefox"
+cask "firefoxnightly"
+cask "firefox-developer-edition"
+
+# chrome, maybe chose one
+cask "google-chrome"
+cask "google-chrome-canary"
+
+# chromium is mandatory for testing purposes
+cask "chromium"
+
+# IDE/Editors
+brew "vim"
+cask "macvim"
+cask "sublime-text"
+cask "visual-studio-code"
+
+# Testing
+brew "geckodriver"
+cask "chromedriver"
+
+# Version Control
+brew "git"
+brew "git-crypt"
+brew "git-extras"
+brew "git-trim"
+brew "hub"
+cask "sublime-merge"
+
+# Documentation
+brew "sphinx-doc"
+
+# File- and documentsharing
+cask "google-drive"
+
+# Paswordmanager
+cask "keepassxc"
+# may come from zeit it
+# cask "1password" 
+
+# useful mac software
+cask "iterm2"
+cask "alfred"
+cask "appcleaner"
+cask "bartender"
+cask "colour-contrast-analyser"
+cask "free-ruler"
+cask "moom"
+cask "slack"
+cask "the-unarchiver"
+cask "openoffice"
+cask "postgres"
+
+# useful shell tools
+brew "ack"
+brew "httpie"
+brew "ssh-copy-id"
+brew "youtube-dl"
+cask "ngrok"
+brew "cowsay"
+brew "ffmpeg"
+brew "imagemagick"
+brew "kubernetes-cli"
+
+# zsh shell
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+
+# Virtualboxes (Blogdev)
+cask "vagrant"
+cask "virtualbox"
