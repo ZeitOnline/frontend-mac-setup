@@ -15,21 +15,21 @@ brew "mas"
 # brew pin python@3.7
 # brew link --overwrite --force python@3.7
 # add "/usr/local/opt/python@3.7/libexec/bin" to path
-brew python
-brew python@3.7, link: true
+brew "python"
+brew "python@3.7", link: true
 
 # zon dev environment
-brew graphviz 
-brew nginx 
-brew libevent 
-brew libjpg 
-brew libmagic
-brew libffi
-brew libmemcached
-brew webp
-brew node
-brew pkg-config
-brew wget
+brew "graphviz"
+brew "nginx"
+brew "libevent"
+brew "libjpg"
+brew "libmagic"
+brew "libffi"
+brew "libmemcached"
+brew "webp"
+brew "node"
+brew "pkg-config"
+brew "wget"
 
 # Browsers
 # Firefox, maybe chose one
