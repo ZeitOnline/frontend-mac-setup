@@ -1,8 +1,11 @@
 # Taps
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/cask-fonts"
+
+# Due to reduced admin privileges, the default install location for casks
+# is set to ~/Applications
+cask_args appdir: "~/Applications"
 
 # Brew extensions and helper
 # Install applications from Mac App Store
@@ -16,7 +19,7 @@ brew "mas"
 # alias python=python3.10
 brew "python@3.10"
 
-# zon dev environment
+# ZON dev environment
 brew "graphviz"
 brew "nginx"
 brew "libevent"
@@ -68,14 +71,13 @@ brew "sphinx-doc"
 # File- and documentsharing
 cask "google-drive"
 
-# Paswordmanager
-# cask "keepassxc"
-# may come from zeit it
-# cask "1password" 
+# password managers
+cask "keepassxc"
+cask "1password" # can be provided by ZEIT IT
 
 # useful mac software
 cask "iterm2"
-cask "warp"
+cask "warp" # an AI-enabled terminal
 cask "alfred"
 cask "appcleaner"
 cask "bartender"
@@ -85,6 +87,7 @@ cask "moom"
 cask "the-unarchiver"
 cask "openoffice"
 cask "postgres"
+cask "figma"
 
 # useful shell tools
 brew "ack"
@@ -101,10 +104,13 @@ brew "z"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
-# Virtualboxes (Blogdev)
-cask "vagrant"
-cask "virtualbox"
+# Virtualization (for ZEIT blog development)
+# Ask your colleagues whether you need these or not
+# cask "vagrant"
+# cask "virtualbox" # not compatible with Apple Silicon
 
-# Coding fonts (for more fonts see https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
+# Coding fonts
+# (for more fonts see https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
+cask "homebrew/cask-fonts/font-ibm-plex-mono"
 cask "homebrew/cask-fonts/font-input"
 cask "homebrew/cask-fonts/font-fira-code"
