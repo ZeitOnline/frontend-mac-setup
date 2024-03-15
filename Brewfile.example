@@ -1,24 +1,25 @@
 # Taps
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
+tap "homebrew/cask-fonts"
+
+# Due to reduced admin privileges, the default install location for casks
+# is set to ~/Applications
+cask_args appdir: "~/Applications"
 
 # Brew extensions and helper
 # Install applications from Mac App Store
 brew "mas"
 
 # Python
-# we need to install different versions
-# brew install python
-# brew install python@3.7
-# brew pin python@3.7
-# brew link --overwrite --force python@3.7
-# add "/usr/local/opt/python@3.7/libexec/bin" to path
-brew "python"
-brew "python@3.7", link: true
+# This will create binaries with the suffix 3.10, e.g. python3.10 and pip3.10
+# in order to avoid conflicts with any other installed python version
+# You can create an alias in your shell configuration to use python3.10 as default
+# e.g. in your .zshrc or .bashrc:
+# alias python=python3.10
+brew "python@3.10"
 
-# zon dev environment
+# ZON dev environment
 brew "graphviz"
 brew "nginx"
 brew "libevent"
@@ -30,6 +31,8 @@ brew "webp"
 brew "node"
 brew "pkg-config"
 brew "wget"
+brew "kustomize"
+brew "pre-commit"
 
 # Browsers
 # Firefox, maybe chose one
@@ -68,23 +71,23 @@ brew "sphinx-doc"
 # File- and documentsharing
 cask "google-drive"
 
-# Paswordmanager
+# password managers
 cask "keepassxc"
-# may come from zeit it
-# cask "1password" 
+cask "1password" # can be provided by ZEIT IT
 
 # useful mac software
 cask "iterm2"
+cask "warp" # an AI-enabled terminal
 cask "alfred"
 cask "appcleaner"
 cask "bartender"
 cask "colour-contrast-analyser"
 cask "free-ruler"
 cask "moom"
-cask "slack"
 cask "the-unarchiver"
 cask "openoffice"
 cask "postgres"
+cask "figma"
 
 # useful shell tools
 brew "ack"
@@ -92,16 +95,22 @@ brew "httpie"
 brew "ssh-copy-id"
 brew "youtube-dl"
 cask "ngrok"
-brew "cowsay"
 brew "ffmpeg"
 brew "imagemagick"
 brew "kubernetes-cli"
+brew "z"
 
 # zsh shell
-brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
-# Virtualboxes (Blogdev)
-cask "vagrant"
-cask "virtualbox"
+# Virtualization (for ZEIT blog development)
+# Ask your colleagues whether you need these or not
+# cask "vagrant"
+# cask "virtualbox" # not compatible with Apple Silicon
+
+# Coding fonts
+# (for more fonts see https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
+cask "homebrew/cask-fonts/font-ibm-plex-mono"
+cask "homebrew/cask-fonts/font-input"
+cask "homebrew/cask-fonts/font-fira-code"

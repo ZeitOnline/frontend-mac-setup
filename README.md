@@ -1,21 +1,24 @@
-# Automatic installation of programs and libraries for frontend devs
+# Automatic installation of apps, tools and libraries for frontend devs
+
 ## Usage
-Check out code and copy the `Brewfile.example` file into you home directory as `Brewfile` and if needed add more programs or edit the file as you like. For instance, chose the shell you like. If you want to put your compiled programs anywhere else than `/Applications`, edit the `cask_args appdir: '/Applications'` line accordingly.
 
-Run `install_packages.sh` from your home directory to install all progs from the Brewfile.
-
-After installing your shell environment, add `/usr/local/opt/python@3.7/libexec/bin` to your path [permanently](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path).
-
-You are done then and have more time to configure your freshly installed mac.
+1. Edit the `Brewfile.example` and edit, add or remove casks as you like.
+2. If you want to put your apps anywhere else than `~/Applications`, edit the `cask_args appdir` line accordingly.
+3. Rename `Brewfile.example` to `Brewfile` and move it to your home directory along with `install_packages.sh`.
+4. Ensure that you have admin privileges then run `chmod +x install_packages.sh && ./install_packages.sh`.
+5. Make sure that the installed Python version is available in your path as `python` and pip is available as `pip`. It is probably necessary to add an alias like `alias python=python3.10` and `alias pip=pip3.10`.
 
 ## What the script does
-- Install xcode utilities
-- Install homebrew
-- Install homebrew bundle
-- Install all software listed in the local `Brewfile`
+
+1. Install xcode utilities
+2. Install homebrew
+3. Add `homebrew/bundle` tap
+4. Install all software listed in the local `Brewfile`
 
 ## Further reading
+
 - [Homebrew](https://brew.sh/)
 - [Homebrew Bundler](https://github.com/Homebrew/homebrew-bundle)
 - [Homebrew Cask](https://github.com/caskroom/homebrew-cask)
 - [Mac Appstore Command Line Interface](https://github.com/mas-cli/mas)
+- 
