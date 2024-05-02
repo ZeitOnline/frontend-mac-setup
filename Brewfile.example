@@ -17,7 +17,7 @@ brew "mas"
 # You can create an alias in your shell configuration to use python3.10 as default
 # e.g. in your .zshrc or .bashrc:
 # alias python=python3.10
-brew "python@3.10"
+brew "python@3.12"
 
 # ZON dev environment
 brew "graphviz"
