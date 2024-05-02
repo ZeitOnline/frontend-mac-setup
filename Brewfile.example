@@ -12,11 +12,11 @@ cask_args appdir: "~/Applications"
 brew "mas"
 
 # Python
-# This will create binaries with the suffix 3.10, e.g. python3.10 and pip3.10
+# This will create binaries with the suffix 3.12, e.g. python3.12 and pip3.12
 # in order to avoid conflicts with any other installed python version
-# You can create an alias in your shell configuration to use python3.10 as default
+# You can create an alias in your shell configuration to use python3.12 as default
 # e.g. in your .zshrc or .bashrc:
-# alias python=python3.10
+# alias python=python3.12
 brew "python@3.12"
 
 # ZON dev environment
