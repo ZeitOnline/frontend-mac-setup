@@ -86,7 +86,7 @@ cask "free-ruler"
 cask "moom"
 cask "the-unarchiver"
 cask "openoffice"
-cask "postgres"
+cask "postgres-unofficial"
 cask "figma"
 
 # useful shell tools
