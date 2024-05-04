@@ -45,7 +45,7 @@ cask "google-chrome"
 cask "google-chrome-canary"
 
 # chromium is mandatory for testing purposes
-cask "chromium"
+cask "chromium", args: {'no-quarantine': true}
 
 # IDE/Editors
 brew "vim"
