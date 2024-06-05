@@ -1,7 +1,6 @@
 # Taps
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
-tap "homebrew/cask-fonts"
 
 # Due to reduced admin privileges, the default install location for casks
 # is set to ~/Applications
@@ -110,7 +109,6 @@ brew "zsh-syntax-highlighting"
 # cask "virtualbox" # not compatible with Apple Silicon
 
 # Coding fonts
-# (for more fonts see https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
-cask "homebrew/cask-fonts/font-ibm-plex-mono"
-cask "homebrew/cask-fonts/font-input"
-cask "homebrew/cask-fonts/font-fira-code"
+cask "font-ibm-plex-mono"
+cask "font-input"
+cask "font-fira-code"
