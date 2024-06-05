@@ -37,12 +37,12 @@ brew "pre-commit"
 # Browsers
 # Firefox, maybe chose one
 cask "firefox"
-cask "firefoxnightly"
-cask "firefox-developer-edition"
+cask "firefox@nightly"
+cask "firefox@developer-edition"
 
 # chrome, maybe chose one
 cask "google-chrome"
-cask "google-chrome-canary"
+cask "google-chrome@canary"
 
 # chromium is mandatory for testing purposes
 cask "chromium"
