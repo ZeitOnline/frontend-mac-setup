@@ -52,10 +52,6 @@ cask "macvim"
 cask "sublime-text"
 cask "visual-studio-code"
 
-# Testing
-brew "geckodriver"
-cask "chromedriver"
-
 # Version Control
 brew "git"
 brew "git-crypt"
