@@ -96,10 +96,6 @@ brew "z"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
-# Virtualization (for ZEIT blog development)
-# Ask your colleagues whether you need these or not
-# cask "vagrant"
-
 # Coding fonts
 cask "font-ibm-plex-mono"
 cask "font-input"
